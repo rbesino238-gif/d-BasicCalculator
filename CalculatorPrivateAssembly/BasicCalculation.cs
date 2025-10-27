@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace d_BasicCalculator
+namespace CalculatorPrivateAssembly
 {
-    internal class CalculatorPrivateAssembly
-    {
+    public class BasicCalculation
+    {       
         // Addition
-        public static float Add(float a, float b) 
+        public static float Add(float a, float b)
         {
             return a + b;
         }

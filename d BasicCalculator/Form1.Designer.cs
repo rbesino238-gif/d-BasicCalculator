@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Number1 = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.Number2 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,13 +48,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Basic Calculator";
             // 
-            // richTextBox1
+            // Number1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(27, 98);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(309, 53);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.Number1.Location = new System.Drawing.Point(27, 98);
+            this.Number1.Name = "Number1";
+            this.Number1.Size = new System.Drawing.Size(309, 53);
+            this.Number1.TabIndex = 2;
+            this.Number1.Text = "";
             // 
             // comboBox1
             // 
@@ -65,13 +65,13 @@
             this.comboBox1.Size = new System.Drawing.Size(78, 37);
             this.comboBox1.TabIndex = 3;
             // 
-            // richTextBox2
+            // Number2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(27, 205);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(309, 53);
-            this.richTextBox2.TabIndex = 4;
-            this.richTextBox2.Text = "";
+            this.Number2.Location = new System.Drawing.Point(27, 205);
+            this.Number2.Name = "Number2";
+            this.Number2.Size = new System.Drawing.Size(309, 53);
+            this.Number2.TabIndex = 4;
+            this.Number2.Text = "";
             // 
             // pictureBox1
             // 
@@ -92,6 +92,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Compute";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -102,12 +103,13 @@
             this.ClientSize = new System.Drawing.Size(358, 405);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.Number2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.Number1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,9 +119,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox Number1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox Number2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
     }
