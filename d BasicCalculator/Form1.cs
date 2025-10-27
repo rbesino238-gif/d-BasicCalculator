@@ -31,30 +31,30 @@ namespace d_BasicCalculator
         {
             try
             {
-                float num1 = float.Parse(comboBox1.SelectedItem.ToString());
-                float num2 = float.Parse(comboBox1.SelectedItem.ToString());
+                float num1 = float.Parse(Number1.Text);
+                float num2 = float.Parse(Number2.Text);
                 float result = 0;
 
                 switch (comboBox1.SelectedItem.ToString())
                 {
-                    case "Additon":
-                        BasicCalculation.Add(num1, num2);
+                    case "+":
+                        result = BasicCalculation.Add(num1, num2);
                         break;
-                    case "division":
-                        BasicCalculation.Add(num1, num2);
+                    case "-":
+                        result = BasicCalculation.Substact(num1, num2);
                         break;
-                    case "Multiplication":
-                        BasicCalculation.Add(num1, num2);
+                    case "*":
+                        result = BasicCalculation.Multiply(num1, num2);
                         break;
-                    case "Subtraction":
-                        BasicCalculation.Add(num1, num2);
+                    case "/":
+                        result = BasicCalculation.Divide(num1, num2);
                         break;
                 }
-                pictureBox1 = new PictureBox();
+                Number.Text = result.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter valid number. ", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Please enter valid number. " + ex.Message);
             }
         }
     }
